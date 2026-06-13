@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Khang Script Hub</title>
+  <title>KhngScript Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -127,7 +127,6 @@
       transform: scale(1.06);
     }
 
-    /* overlay gradient on image bottom */
     .card-thumb-wrap::after {
       content: '';
       position: absolute;
@@ -190,7 +189,6 @@
     .mm2 .card-btn  { background: linear-gradient(90deg,#6d28d9,#a855f7); color: #fff; }
     .sab .card-btn  { background: linear-gradient(90deg,#be123c,#e94560); color: #fff; }
 
-    /* ── Modal ── */
     .overlay {
       position: fixed;
       inset: 0;
@@ -319,7 +317,7 @@
 <div class="page">
   <div class="badge">Roblox Script Hub</div>
   <h1>Khang Script Hub</h1>
-  <p class="subtitle">Chọn game để lấy script — copy 1 click, paste vào executor.</p>
+  <p class="subtitle">Select a game to get the script — copy with one click, paste into your executor.</p>
 
   <div class="grid">
 
@@ -335,10 +333,10 @@
       <div class="card-body">
         <span class="card-tag">Simulator</span>
         <div class="card-title">Grow A Garden 2</div>
-        <p class="card-desc">Auto farm, auto collect, speed hack và nhiều tính năng mạnh mẽ khác.</p>
+        <p class="card-desc">Auto farm, auto collect, speed hack and many other powerful features.</p>
         <button class="card-btn">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M8 9l4-4 4 4M12 5v11M5 19h14"/></svg>
-          Lấy Script
+          Get Script
         </button>
       </div>
     </div>
@@ -355,10 +353,10 @@
       <div class="card-body">
         <span class="card-tag">Mystery</span>
         <div class="card-title">Murder Mystery 2</div>
-        <p class="card-desc">ESP, aimbot, godmode và các cheat hữu ích cho Murderer & Sheriff.</p>
+        <p class="card-desc">ESP, aimbot, godmode and useful cheats for both Murderer and Sheriff roles.</p>
         <button class="card-btn">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M8 9l4-4 4 4M12 5v11M5 19h14"/></svg>
-          Lấy Script
+          Get Script
         </button>
       </div>
     </div>
@@ -375,17 +373,17 @@
       <div class="card-body">
         <span class="card-tag">Tycoon</span>
         <div class="card-title">Steal A Brainrot</div>
-        <p class="card-desc">Auto trade, auto steal, dupe items và hệ thống thông báo Discord.</p>
+        <p class="card-desc">Auto trade, auto steal, dupe items and a built-in Discord notification system.</p>
         <button class="card-btn">
           <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M8 9l4-4 4 4M12 5v11M5 19h14"/></svg>
-          Lấy Script
+          Get Script
         </button>
       </div>
     </div>
 
   </div>
 
-  <div class="footer">Made by Khang &nbsp;·&nbsp; Paste vào executor rồi Execute</div>
+  <div class="footer">Made by Khang &nbsp;·&nbsp; Paste into your executor and hit Execute</div>
 </div>
 
 <!-- Modal -->
@@ -397,7 +395,7 @@
         <span class="modal-title" id="modal-title"></span>
         <button class="close-btn" onclick="closeModal()">✕</button>
       </div>
-      <div class="modal-label">Script — copy & paste vào executor</div>
+      <div class="modal-label">Script — copy &amp; paste into your executor</div>
       <div class="script-box" id="script-text"></div>
       <button class="copy-btn idle" id="copy-btn" onclick="copyScript()">
         <svg id="copy-icon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
@@ -410,7 +408,6 @@
 </div>
 
 <script>
-  // ── Starfield ──
   const canvas = document.getElementById('stars-canvas');
   const ctx = canvas.getContext('2d');
   let stars = [];
@@ -444,7 +441,6 @@
   window.addEventListener('resize', resize);
   drawStars();
 
-  // ── Data ──
   const scripts = {
     gag: {
       title: '🌱 Grow A Garden 2',
@@ -493,12 +489,12 @@
       const label = document.getElementById('copy-label');
       const icon  = document.getElementById('copy-icon');
       btn.classList.replace('idle', 'success');
-      label.textContent = 'Đã copy!';
+      label.textContent = 'Copied!';
       icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>';
       if (copyTimer) clearTimeout(copyTimer);
       copyTimer = setTimeout(resetCopyBtn, 2500);
     }).catch(() => {
-      alert('Copy thất bại — hãy bôi đen text và copy thủ công!');
+      alert('Copy failed — please select the text and copy manually!');
     });
   }
 
